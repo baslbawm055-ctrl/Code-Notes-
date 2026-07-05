@@ -1,0 +1,6 @@
+{
+  "name": "CodeNotes",
+  "description": "A modern, minimal, and professional programming note-taking app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

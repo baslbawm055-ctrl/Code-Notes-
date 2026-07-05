@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ملاحظات برمجية</string>
+    <string name="no_notes_title">لا توجد ملاحظات</string>
+    <string name="no_notes_subtitle">ابدأ في كتابة ملاحظاتك البرمجية.</string>
+    <string name="search_hint">البحث في الملاحظات...</string>
+    <string name="fab_content_desc">إنشاء ملاحظة جديدة</string>
+    <string name="action_dark_mode">تبديل الوضع الليلي</string>
+    <string name="action_settings">الإعدادات</string>
+
+    <string name="new_note">ملاحظة جديدة</string>
+    <string name="edit_note">تعديل الملاحظة</string>
+    <string name="note_title">عنوان الملاحظة</string>
+    <string name="programming_language">لغة البرمجة</string>
+    <string name="tags_optional">الوسوم (اختياري)</string>
+    <string name="note_content_hint">اكتب ملاحظاتك البرمجية هنا...</string>
+    <string name="action_save">حفظ</string>
+    <string name="btn_save_note">حفظ الملاحظة</string>
+    <string name="btn_cancel">إلغاء</string>
+    <string name="error_title_empty">العنوان لا يمكن أن يكون فارغاً</string>
+    <string name="msg_note_saved_temp">تم حفظ الملاحظة</string>
+    <string name="last_edited_placeholder">آخر تعديل: الآن</string>
+    <string name="character_count_placeholder">0 حرف</string>
+    
+    <string name="btn_copy_code">نسخ الكود</string>
+    <string name="msg_code_copied">تم نسخ الكود إلى الحافظة</string>
+    
+    <string name="action_delete">حذف</string>
+    <string name="action_edit">تعديل</string>
+    <string name="action_share">مشاركة</string>
+    <string name="action_pin">تثبيت</string>
+    <string name="action_unpin">إلغاء التثبيت</string>
+    <string name="msg_note_deleted">تم حذف الملاحظة</string>
+    <string name="action_undo">تراجع</string>
+    <string name="dialog_delete_title">حذف الملاحظة؟</string>
+    <string name="dialog_delete_message">هل أنت متأكد أنك تريد حذف هذه الملاحظة نهائياً؟</string>
+    <string name="msg_note_updated">تم تحديث الملاحظة</string>
+
+    <string name="msg_error_updating_note">حدث خطأ أثناء تحديث الملاحظة</string>
+    <string name="msg_error_saving_note">حدث خطأ أثناء حفظ الملاحظة</string>
+
+    <string name="title_settings">الإعدادات</string>
+    <string name="settings_appearance">المظهر</string>
+    <string name="settings_dark_mode">الوضع الليلي</string>
+    <string name="settings_light_mode">الوضع الفاتح</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_english">الإنجليزية</string>
+    <string name="settings_arabic">العربية</string>
+    <string name="settings_editor">المحرر</string>
+    <string name="settings_font_size">حجم الخط</string>
+    <string name="settings_data">البيانات</string>
+    <string name="settings_backup">النسخ الاحتياطي</string>
+    <string name="settings_restore">استعادة</string>
+    <string name="settings_export">تصدير الملاحظات</string>
+    <string name="settings_import">استيراد الملاحظات</string>
+    <string name="settings_about">حول التطبيق</string>
+    <string name="settings_privacy_policy">سياسة الخصوصية</string>
+    
+    <string-array name="programming_languages">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Python</item>
+        <item>JavaScript</item>
+        <item>TypeScript</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>C#</item>
+        <item>Dart</item>
+        <item>Flutter</item>
+        <item>PHP</item>
+        <item>HTML</item>
+        <item>CSS</item>
+        <item>SQL</item>
+        <item>XML</item>
+        <item>JSON</item>
+        <item>Markdown</item>
+        <item>أخرى</item>
+    </string-array>
+</resources>
