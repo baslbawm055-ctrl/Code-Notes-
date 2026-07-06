@@ -49,12 +49,17 @@ public class EditorActivity extends AppCompatActivity {
         findViewById(android.R.id.content).setTransitionName("shared_element_container");
         MaterialContainerTransform transform = new MaterialContainerTransform();
         transform.addTarget(android.R.id.content);
-        transform.setDuration(300);
+        transform.setDuration(200);
         getWindow().setSharedElementEnterTransition(transform);
         getWindow().setSharedElementReturnTransition(transform);
 
-        getWindow().setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
-        getWindow().setReturnTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+        MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, true);
+        enterTransition.setDuration(200);
+        getWindow().setEnterTransition(enterTransition);
+
+        MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, false);
+        returnTransition.setDuration(200);
+        getWindow().setReturnTransition(returnTransition);
         super.onCreate(savedInstanceState);
         binding = ActivityEditorBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -109,6 +114,7 @@ public class EditorActivity extends AppCompatActivity {
             
             binding.btnCancel.setVisibility(View.GONE);
             binding.btnSaveNote.setVisibility(View.GONE);
+            binding.btnCopyCode.setVisibility(View.VISIBLE);
             
             binding.inputNoteContent.setFocusable(false);
             binding.inputNoteContent.setFocusableInTouchMode(false);
@@ -144,6 +150,7 @@ public class EditorActivity extends AppCompatActivity {
             
             binding.btnCancel.setVisibility(View.VISIBLE);
             binding.btnSaveNote.setVisibility(View.VISIBLE);
+            binding.btnCopyCode.setVisibility(View.GONE);
             
             binding.inputNoteContent.setFocusable(true);
             binding.inputNoteContent.setFocusableInTouchMode(true);
@@ -280,10 +287,14 @@ public class EditorActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem itemSave = menu.findItem(R.id.action_save);
         MenuItem itemEdit = menu.findItem(R.id.action_edit);
+        MenuItem itemCopy = menu.findItem(R.id.action_copy);
         
         if (itemSave != null && itemEdit != null) {
             itemSave.setVisible(!isViewMode);
             itemEdit.setVisible(isViewMode);
+        }
+        if (itemCopy != null) {
+            itemCopy.setVisible(isViewMode);
         }
         return super.onPrepareOptionsMenu(menu);
     }
@@ -296,6 +307,9 @@ public class EditorActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.action_edit) {
             isViewMode = false;
             updateUIForMode();
+            return true;
+        } else if (item.getItemId() == R.id.action_copy) {
+            copyCodeToClipboard();
             return true;
         } else if (item.getItemId() == android.R.id.home) {
             closeEditor();

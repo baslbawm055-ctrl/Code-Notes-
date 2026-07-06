@@ -55,8 +55,13 @@ public class MainActivity extends AppCompatActivity implements OnNoteClickListen
         isDarkMode = prefs.getBoolean("is_dark_mode", (getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES);
         androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(isDarkMode ? androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES : androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
 
-        getWindow().setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, true));
-        getWindow().setReenterTransition(new MaterialSharedAxis(MaterialSharedAxis.Z, false));
+        MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, true);
+        exitTransition.setDuration(200);
+        getWindow().setExitTransition(exitTransition);
+
+        MaterialSharedAxis reenterTransition = new MaterialSharedAxis(MaterialSharedAxis.Z, false);
+        reenterTransition.setDuration(200);
+        getWindow().setReenterTransition(reenterTransition);
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

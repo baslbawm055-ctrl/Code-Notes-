@@ -55,6 +55,31 @@
     <string name="settings_import">Import Notes</string>
     <string name="settings_about">About</string>
     <string name="settings_privacy_policy">Privacy Policy</string>
+
+    <string name="settings_theme_sub">Choose your visual theme</string>
+    <string name="settings_language_sub">Choose application language</string>
+    <string name="settings_font_size_sub">Adjust the note text size</string>
+    <string name="settings_backup_sub">Save a quick backup locally</string>
+    <string name="settings_restore_sub">Restore notes from quick backup</string>
+    <string name="settings_export_sub">Save notes to a custom JSON file</string>
+    <string name="settings_import_sub">Load notes from a custom JSON file</string>
+    <string name="settings_about_sub">Learn more about CodeNotes</string>
+    <string name="settings_privacy_sub">Read our commitment to privacy</string>
+
+    <string name="msg_backup_success">Backup saved successfully</string>
+    <string name="msg_backup_failed">Failed to save backup</string>
+    <string name="msg_restore_success">Notes restored successfully</string>
+    <string name="msg_restore_failed">Failed to restore notes</string>
+    <string name="msg_no_backup_found">No local backup file found. Use Import option.</string>
+    <string name="msg_export_success">Notes exported successfully</string>
+    <string name="msg_import_success">Notes imported successfully</string>
+    <string name="msg_import_failed">Failed to import notes</string>
+
+    <string name="dialog_about_title">About CodeNotes</string>
+    <string name="dialog_about_message">CodeNotes is an elegant, Material 3 note-taking app designed for developers and programmers.\n\nBuilt with Java &amp; syntax highlighting code views.</string>
+
+    <string name="dialog_privacy_title">Privacy Policy</string>
+    <string name="dialog_privacy_message">CodeNotes values your privacy. All your notes are stored 100% locally on your device in a private secure SQLite database. No data is ever transmitted online or shared with third parties.</string>
     
     <string-array name="programming_languages">
         <item>Java</item>

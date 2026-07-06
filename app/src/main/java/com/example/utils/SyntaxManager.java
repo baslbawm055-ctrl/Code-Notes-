@@ -23,6 +23,10 @@ public class SyntaxManager {
     public static void applySyntax(Context context, CodeView codeView) {
         codeView.resetSyntaxPatternList();
 
+        android.content.SharedPreferences prefs = context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE);
+        float fontSize = prefs.getFloat("font_size", 16f);
+        codeView.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP, fontSize);
+
         boolean isDarkMode = (context.getResources().getConfiguration().uiMode & 
                 android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES;
 
